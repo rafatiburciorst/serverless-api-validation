@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "invoke-local": "IS_OFFLINE=true npx sls invoke local -f hero-insert --path mocks/heroes.insert.json",
+    "invoke-local-trigger": "IS_OFFLINE=true npx sls invoke local -f hero-trigger --path mocks/heroes.trigger.json",
     "invoke": "npx sls invoke -f hero-insert --path mocks/heroes.insert.json",
     "log-trigger": "npx sls logs -f hero-trigger"
   },
