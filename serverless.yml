@@ -17,6 +17,7 @@ provider:
             - dynamodb:PutItem
             - dynamodb:ListStreams
             - dynamodb:DescribeStreams
+            - dynamodb:Query
           Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}
 
 functions:
@@ -56,3 +57,5 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
+        StreamSpecification:
+          StreamViewType: NEW_AND_OLD_IMAGES

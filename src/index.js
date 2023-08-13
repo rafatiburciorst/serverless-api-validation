@@ -14,7 +14,7 @@ const heroesInsert = decoratorValidator(
 
 
 const heroesTrigger = async (event) => {
-  console.log('***event', event);
+  console.log('***event', JSON.stringify(event));
   return {
     statusCode: 200,
     body: JSON.stringify(
